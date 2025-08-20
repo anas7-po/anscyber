@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>منصة استشارات الأمن السيبراني</title>
+  <meta name="description" content="منصة متخصصة في استشارات الأمن السيبراني: تقييم الثغرات، اختبار الاختراق، واستشارات الامتثال. حماية بياناتك وأمان شبكتك بأحدث التقنيات.">
+  <meta name="keywords" content="الأمن السيبراني, استشارات, حماية البيانات, اختبار اختراق, تقييم الثغرات, امتثال">
+  <meta property="og:image" content="./site-image.png">
+  <meta name="twitter:image" content="./site-image.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Tajawal', sans-serif; background: #121212; color: #e0e0e0; }
+    @keyframes fade-up { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+    .animate-fade-up { animation: fade-up 0.8s ease-in-out; }
+    .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: scale(1.05); box-shadow: 0 0 20px #9c27b0; }
+    .counter { font-size: 2rem; font-weight: bold; color: #9c27b0; }
+    .highlight-text { color: #9c27b0; }
+    .btn { background: linear-gradient(90deg, #9c27b0, #e91e63); color: #fff; padding: 0.75rem 1.5rem; border-radius: 1rem; text-shadow: 0 0 5px rgba(0,0,0,0.2); display: inline-flex; align-items: center; gap: 0.5rem; transition: transform 0.3s, box-shadow 0.3s; }
+    .btn:hover { transform: scale(1.05); box-shadow: 0 0 20px #e91e63; }
+    .navbar { background: #1a1f2e; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+    .navbar a { color: #fff; margin: 0 0.75rem; transition: color 0.3s; }
+    .navbar a:hover { color: #9c27b0; }
+    .scroll-top { position: fixed; bottom: 2rem; right: 2rem; background: #9c27b0; color: #fff; padding: 0.75rem; border-radius: 50%; cursor: pointer; display: none; }
+    .owner-name { color: #fff; font-size: 0.9rem; }
+    .site-logo { max-width: 120px; margin: 1rem auto; display:block; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar fixed w-full top-0 z-50 shadow-lg">
+    <div class="text-xl font-bold highlight-text">CyberSecure</div>
+    <div>
+      <a href="#services">الخدمات</a>
+      <a href="#achievements">الإنجازات</a>
+      <a href="#tips">نصائح</a>
+      <a href="#accounts">تواصل</a>
+    </div>
+  </nav>
+
+  <header class="text-center pt-28 pb-10 bg-[#1a1f2e] shadow-lg">
+    <img src="./site-image.png" alt="شعار منصة استشارات الأمن السيبراني" class="site-logo animate-fade-up">
+    <h1 class="text-3xl font-bold animate-fade-up highlight-text">منصة استشارات الأمن السيبراني</h1>
+    <p class="mt-2 text-base animate-fade-up">حماية بياناتك وأمان شبكتك بأحدث التقنيات</p>
+  </header>
+
+  <section id="services" class="p-10">
+    <h2 class="text-2xl font-bold highlight-text mb-6 animate-fade-up">خدماتنا</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card bg-[#1e1e1e] shadow-lg rounded-2xl p-6 animate-fade-up">
+        <i class='bx bxs-shield text-4xl text-[#9c27b0] mb-3'></i>
+        <h3 class="font-bold mb-2 highlight-text">تقييم الثغرات</h3>
+        <p>اكتشاف نقاط الضعف في أنظمة شركتك قبل استغلالها.</p>
+      </div>
+      <div class="card bg-[#1e1e1e] shadow-lg rounded-2xl p-6 animate-fade-up">
+        <i class='bx bxs-hacker text-4xl text-[#9c27b0] mb-3'></i>
+        <h3 class="font-bold mb-2 highlight-text">اختبار الاختراق</h3>
+        <p>محاكاة الهجمات للتأكد من قوة دفاعاتك السيبرانية.</p>
+      </div>
+      <div class="card bg-[#1e1e1e] shadow-lg rounded-2xl p-6 animate-fade-up">
+        <i class='bx bxs-cog text-4xl text-[#9c27b0] mb-3'></i>
+        <h3 class="font-bold mb-2 highlight-text">استشارات الامتثال</h3>
+        <p>تقديم حلول أمان متوافقة مع المعايير الدولية والمحلية.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements" class="p-10 text-center">
+    <h2 class="text-2xl font-bold highlight-text mb-6 animate-fade-up">إنجازاتنا</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-[#1e1e1e] shadow-lg rounded-2xl p-6 animate-fade-up">
+        <i class='bx bxs-user-check text-4xl text-[#9c27b0] mb-3'></i>
+        <div class="counter" data-target="1200">0</div>
+        <p>عميل سعيد</p>
+      </div>
+      <div class="bg-[#1e1e1e] shadow-lg rounded-2xl p-6 animate-fade-up">
+        <i class='bx bxs-network-chart text-4xl text-[#9c27b0] mb-3'></i>
+        <div class="counter" data-target="85">0</div>
+        <p>شبكات مؤمنة</p>
+      </div>
+      <div class="bg-[#1e1e1e] shadow-lg rounded-2xl p-6 animate-fade-up">
+        <i class='bx bxs-briefcase text-4xl text-[#9c27b0] mb-3'></i>
+        <div class="counter" data-target="40">0</div>
+        <p>مشروع أمني</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-10">
+    <h2 class="text-2xl font-bold highlight-text mb-6 text-center animate-fade-up">توزيع خدماتنا</h2>
+    <div class="max-w-2xl mx-auto bg-[#1e1e1e] shadow-lg rounded-2xl p-6 animate-fade-up">
+      <canvas id="securityChart" height="120"></canvas>
+    </div>
+  </section>
+
+  <section id="tips" class="p-10">
+    <h2 class="text-2xl font-bold highlight-text mb-6 animate-fade-up">نصائح أمنية</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-[#1e1e1e] shadow-lg rounded-2xl p-6 animate-fade-up">
+        <h3 class="font-bold highlight-text mb-2">كلمة مرور قوية</h3>
+        <p>استخدم كلمات مرور طويلة ومعقدة وفعّل المصادقة الثنائية.</p>
+      </div>
+      <div class="bg-[#1e1e1e] shadow-lg rounded-2xl p-6 animate-fade-up">
+        <h3 class="font-bold highlight-text mb-2">تحديثات النظام</h3>
+        <p>قم بتحديث أنظمة التشغيل والتطبيقات بانتظام لسد الثغرات.</p>
+      </div>
+      <div class="bg-[#1e1e1e] shadow-lg rounded-2xl p-6 animate-fade-up">
+        <h3 class="font-bold highlight-text mb-2">شبكات آمنة</h3>
+        <p>استخدم شبكات VPN وتأكد من أمان Wi-Fi المنزلية والشركات.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="accounts" class="p-10 text-center">
+    <h2 class="text-2xl font-bold highlight-text mb-6 animate-fade-up">تواصل معنا</h2>
+    <p class="mb-4">تواصل عبر القنوات التالية:</p>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="https://www.instagram.com/ma8__1" target="_blank" class="btn" style="background: linear-gradient(90deg, #e1306c, #f77737);">
+        <i class='bx bxl-instagram text-xl'></i> انستغرام
+      </a>
+      <a href="https://wa.me/+967713745587" target="_blank" class="btn" style="background: linear-gradient(90deg, #25d366, #128c7e);">
+        <i class='bx bxl-whatsapp text-xl'></i> واتساب
+      </a>
+      <p class="w-full mt-2 text-gray-300">أو راسلنا عبر البريد: <a href="mailto:alrabyans@gmail.com" class="text-[#9c27b0]">alrabyans@gmail.com</a></p>
+    </div>
+    <p class="mt-4 owner-name">الموقع خاص بمستشار الأمن السيبراني: انس محمد علي العرابي</p>
+  </section>
+
+  <div class="scroll-top" id="scrollTop"><i class='bx bx-up-arrow-alt text-2xl'></i></div>
+
+  <footer class="bg-[#1a1f2e] text-white text-center p-6 mt-10">
+    <p>© 2025 منصة استشارات الأمن السيبراني - جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script>
+    // العدادات
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 200;
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20);
+        } else { counter.innerText = target; }
+      };
+      updateCount();
+    });
+
+    // الرسم البياني
+    const ctx = document.getElementById('securityChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['تقييم الثغرات', 'اختبار الاختراق', 'استشارات الامتثال'],
+        datasets: [{
+          data: [40, 35, 25],
+          backgroundColor: ['#9c27b0', '#ff5722', '#e91e63'],
+          borderWidth: 2,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { font: { family: 'Tajawal', color: '#e0e0e0' } }
+          }
+        }
+      }
+    });
+
+    // زر العودة للأعلى
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    scrollTopBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  </script>
+
+</body>
+</html>
